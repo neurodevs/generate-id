@@ -1,6 +1,6 @@
 {
   "name": "@neurodevs/generate-id",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "build/index.js",
   "description": "Exports a single function for creating unique identifiers.",
   "repository": "https://github.com/neurodevs/generate-id.git",

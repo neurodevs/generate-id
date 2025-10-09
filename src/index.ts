@@ -1,1 +1,1 @@
-export { default as generateId } from './generateId'
+export { default } from './generateId'

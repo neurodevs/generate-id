@@ -1,9 +1,12 @@
 {
   "name": "@neurodevs/generate-id",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "build/index.js",
   "description": "Exports a single function for creating unique identifiers.",
-  "repository": "https://github.com/neurodevs/generate-id.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurodevs/generate-id.git"
+  },
   "scripts": {
     "build.ci": "yarn run build.tsc && yarn run build.resolve-paths && yarn run lint",
     "build.dev": "yarn run build.tsc --sourceMap ; yarn run resolve-paths.lint",

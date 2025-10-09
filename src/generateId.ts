@@ -1,7 +1,8 @@
 import crypto from 'crypto'
 
-export default function generateId() {
-    return cryptoModule.randomUUID().replace(/-/g, '')
+export default function generateId(includeDashes = false) {
+    const uuid = cryptoModule.randomUUID()
+    return includeDashes ? uuid : uuid.replace(/-/g, '')
 }
 
 // For test doubles

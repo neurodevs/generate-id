@@ -35,7 +35,14 @@ export default class GenerateIdTest extends AbstractSpruceTest {
         assert.doesNotInclude(id, '-', 'UUID should not have dashes!')
     }
 
-    private static generateId() {
-        return generateId()
+    @test()
+    protected static async providesOptionToIncludeDashes() {
+        const id = this.generateId(true)
+
+        assert.doesInclude(id, '-', 'UUID should have dashes when requested!')
+    }
+
+    private static generateId(includeDashes?: boolean) {
+        return generateId(includeDashes)
     }
 }

@@ -19,12 +19,23 @@ export default class GenerateIdTest extends AbstractSpruceTest {
 
     @test()
     protected static async callsCryptoRandomUUID() {
-        generateId()
+        this.generateId()
 
         assert.isEqual(
             numCallsToRandomUUID,
             1,
             'Did not call crypto.randomUUID()!'
         )
+    }
+
+    @test()
+    protected static async returnsUuidWithNoDashesByDefault() {
+        const id = this.generateId()
+
+        assert.doesNotInclude(id, '-', 'UUID should not have dashes!')
+    }
+
+    private static generateId() {
+        return generateId()
     }
 }

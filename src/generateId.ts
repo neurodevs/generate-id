@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 
 export default function generateId() {
-    return cryptoModule.randomUUID()
+    return cryptoModule.randomUUID().replace(/-/g, '')
 }
 
 // For test doubles

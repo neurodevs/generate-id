@@ -1,12 +1,23 @@
 {
   "name": "@neurodevs/generate-id",
   "version": "1.0.0",
-  "main": "build/index.js",
   "description": "Exports a single function for creating unique identifiers.",
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "tdd"
+  ],
+  "license": "MIT",
+  "author": "Eric Yates <hello@ericthecurious.com>",
+  "homepage": "https://github.com/neurodevs/generate-id",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neurodevs/generate-id.git"
   },
+  "bugs": {
+    "url": "https://github.com/neurodevs/generate-id/issues"
+  },
+  "main": "build/index.js",
   "scripts": {
     "build.ci": "yarn run build.tsc && yarn run build.resolve-paths && yarn run lint",
     "build.dev": "yarn run build.tsc --sourceMap ; yarn run resolve-paths.lint",
@@ -29,6 +40,7 @@
     "watch.rebuild": "yarn run clean.all && yarn install && yarn run watch.build.dev",
     "watch.tsc": "tsc -w"
   },
+  "dependencies": {},
   "devDependencies": {
     "@sprucelabs/jest-json-reporter": "^9.0.63",
     "@sprucelabs/resolve-path-aliases": "^3.0.28",

@@ -1,9 +1,9 @@
 import AbstractSpruceTest, { test, assert } from '@sprucelabs/test-utils'
-import generateId, { setCryptoModule } from '../generateId'
+import generateId, { setCryptoModule } from '../../functions/generateId'
 import spyCrypto, {
     numCallsToRandomUUID,
     resetNumCallsToRandomUUID,
-} from '../testDoubles/spyCrypto'
+} from '../../testDoubles/spyCrypto'
 
 export default class GenerateIdTest extends AbstractSpruceTest {
     protected static async beforeEach() {

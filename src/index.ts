@@ -1,1 +1,3 @@
-export { default } from './functions/generateId'
+import generateId from './functions/generateId'
+
+export default generateId

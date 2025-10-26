@@ -1,7 +1,8 @@
 {
   "name": "@neurodevs/generate-id",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Exports a single function for creating unique identifiers.",
+  "type": "module",
   "keywords": [
     "nodejs",
     "typescript",
@@ -42,7 +43,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@neurodevs/generate-id": "^1.0.0",
     "@sprucelabs/jest-json-reporter": "^9.0.63",
     "@sprucelabs/resolve-path-aliases": "^3.0.28",
     "@sprucelabs/test": "^10.0.24",

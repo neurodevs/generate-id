@@ -1,6 +1,6 @@
 {
   "name": "@neurodevs/generate-id",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Exports a single function for creating unique identifiers.",
   "keywords": [
     "nodejs",

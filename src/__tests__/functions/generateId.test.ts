@@ -1,9 +1,4 @@
-import * as SpruceTest from '@sprucelabs/test-utils'
-
-const Spruce: any = SpruceTest.default ?? SpruceTest
-const { assert, test } = Spruce
-const AbstractSpruceTest = Spruce.default ?? Spruce
-
+import AbstractSpruceTest, { assert, test } from '@sprucelabs/test-utils'
 import generateId, { setCryptoModule } from '../../functions/generateId.js'
 import spyCrypto, {
     numCallsToRandomUUID,

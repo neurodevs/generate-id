@@ -1,6 +1,6 @@
 {
   "name": "@neurodevs/generate-id",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Exports a single function for creating unique identifiers.",
   "type": "module",
   "keywords": [
@@ -43,7 +43,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@neurodevs/node-tdd": "^0.1.2",
+    "@neurodevs/node-tdd": "^0.1.3",
     "@types/node": "^24.7.0",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.37.0",

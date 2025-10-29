@@ -1,20 +1,16 @@
-import AbstractSpruceTest, { assert, test } from '@sprucelabs/test-utils'
+import AbstractModuleTest, { assert, test } from '@neurodevs/node-tdd'
+
 import generateId, { setCryptoModule } from '../../functions/generateId.js'
 import spyCrypto, {
     numCallsToRandomUUID,
     resetNumCallsToRandomUUID,
 } from '../../testDoubles/spyCrypto.js'
 
-export default class GenerateIdTest extends AbstractSpruceTest {
+export default class GenerateIdTest extends AbstractModuleTest {
     protected static async beforeEach() {
         await super.beforeEach()
 
         this.setSpyCrypto()
-    }
-
-    private static setSpyCrypto() {
-        setCryptoModule(spyCrypto as typeof import('crypto'))
-        resetNumCallsToRandomUUID()
     }
 
     @test()
@@ -40,6 +36,11 @@ export default class GenerateIdTest extends AbstractSpruceTest {
         const id = this.generateId(true)
 
         assert.doesInclude(id, '-', 'UUID should have dashes when requested!')
+    }
+
+    private static setSpyCrypto() {
+        setCryptoModule(spyCrypto as typeof import('crypto'))
+        resetNumCallsToRandomUUID()
     }
 
     private static generateId(includeDashes?: boolean) {

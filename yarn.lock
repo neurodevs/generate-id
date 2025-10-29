@@ -708,10 +708,10 @@
     "@emnapi/runtime" "^1.4.3"
     "@tybys/wasm-util" "^0.10.0"
 
-"@neurodevs/node-tdd@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@neurodevs/node-tdd/-/node-tdd-0.1.0.tgz#88ed0a55101e0c73db1d31edabf0c1d0df669f36"
-  integrity sha512-Szeveve5JI3Wg4Lgy9qoK/0Kp1HgWxXHlXwovXl7yy80g4334fCAlifZ2jvGBZCGo7dWpgwOMaekDZ6Jkw4hHA==
+"@neurodevs/node-tdd@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@neurodevs/node-tdd/-/node-tdd-0.1.1.tgz#f0b6280ac37a4a2178e249b7c63fcffdd96e7eef"
+  integrity sha512-OXpZe+9QJ/u1nuJAZ8dxqi593J5xVxFMHQO/7jP3ckhxjvS2Q+MGNyPdQmWa8TfL/hnS1A4sfCxOgkAXOOI3dg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

@@ -43,7 +43,7 @@ export default class GenerateIdTest extends AbstractModuleTest {
         resetNumCallsToRandomUUID()
     }
 
-    private static generateId(includeDashes?: boolean) {
+    protected static generateId(includeDashes?: boolean) {
         return generateId(includeDashes)
     }
 }

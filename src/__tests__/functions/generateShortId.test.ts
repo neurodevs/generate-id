@@ -1,13 +1,15 @@
 import crypto from 'crypto'
 import AbstractModuleTest, { assert, test } from '@neurodevs/node-tdd'
 
-import generateId, { setCryptoModule } from '../../functions/generateId.js'
+import generateShortId, {
+    setCryptoModule,
+} from '../../functions/generateShortId.js'
 import spyCrypto, {
     numCallsToRandomUUID,
     resetNumCallsToRandomUUID,
 } from '../../testDoubles/spyCrypto.js'
 
-export default class GenerateIdTest extends AbstractModuleTest {
+export default class GenerateShortIdTest extends AbstractModuleTest {
     protected static async beforeEach() {
         await super.beforeEach()
 
@@ -16,7 +18,7 @@ export default class GenerateIdTest extends AbstractModuleTest {
 
     @test()
     protected static async callsCryptoRandomUUID() {
-        this.generateId()
+        this.generateShortId()
 
         assert.isEqual(
             numCallsToRandomUUID,
@@ -26,21 +28,21 @@ export default class GenerateIdTest extends AbstractModuleTest {
     }
 
     @test()
-    protected static async returnsIdWithNoDashesByDefault() {
-        const id = this.generateId()
+    protected static async returnsUuidWithNoDashes() {
+        const id = this.generateShortId()
 
-        assert.doesNotInclude(id, '-', 'Should not have dashes by default!')
+        assert.doesNotInclude(id, '-', 'Short ID should not have dashes!')
     }
 
     @test()
-    protected static async includesDashesWhenRequested() {
-        const id = this.generateId(true)
+    protected static async returnsIdWithLengthSix() {
+        const id = this.generateShortId()
 
-        assert.doesInclude(id, '-', 'Should include dashes when requested!')
+        assert.isEqual(id.length, 6, 'Short ID should be of length 6!')
     }
 
-    protected static generateId(includeDashes?: boolean) {
-        return generateId(includeDashes)
+    protected static generateShortId() {
+        return generateShortId()
     }
 
     protected static setSpyCrypto() {

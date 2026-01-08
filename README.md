@@ -1,2 +1,2 @@
 # generate-id
-Exports a single function for creating unique identifiers.
+Exports functions for creating unique identifiers: generateId() and generateShortId()

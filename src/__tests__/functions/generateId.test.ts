@@ -1,13 +1,14 @@
 import crypto from 'crypto'
-import AbstractModuleTest, { assert, test } from '@neurodevs/node-tdd'
+import { assert, test } from '@neurodevs/node-tdd'
 
 import generateId, { setCryptoModule } from '../../functions/generateId.js'
 import spyCrypto, {
     numCallsToRandomUUID,
     resetNumCallsToRandomUUID,
 } from '../../testDoubles/spyCrypto.js'
+import AbstractPackageTest from '../AbstractPackageTest.js'
 
-export default class GenerateIdTest extends AbstractModuleTest {
+export default class GenerateIdTest extends AbstractPackageTest {
     protected static async beforeEach() {
         await super.beforeEach()
 

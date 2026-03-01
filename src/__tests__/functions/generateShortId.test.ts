@@ -1,6 +1,5 @@
 import crypto from 'crypto'
-import 
-{ assert, test } from '@neurodevs/node-tdd'
+import { assert, test } from '@neurodevs/node-tdd'
 
 import generateShortId, {
     setCryptoModule,
